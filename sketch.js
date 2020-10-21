@@ -3,7 +3,7 @@ const Engine = Matter.Engine;
 const World = Matter.World;
 const Bodies = Matter.Bodies;
 const Body = Matter.Body;
-var leftWall,ground,ball;
+var bin,ground,ball;
 function preload()
 {
 	
@@ -17,13 +17,13 @@ function setup() {
   world = engine.world;
   
 	ground = new Ground(700,665,1900,10);
-  leftWall=new dustbin (1200,650,200,10);
+  bin=new dustbin (1200,650,200,10);
   ball=new PaperBall(200,450);
 
 	//Create the Bodies Here.
 
 
-	Engine.run(engine);
+	//Engine.run(engine);
   
 }
 
@@ -32,10 +32,10 @@ function draw() {
   rectMode(CENTER);
   background(0);
   Engine.update(engine);
-  leftWall.display();
+  bin.display();
   ball.display();
   ground.display();
-  keyPressed(); 
+ // keyPressed(); 
   
 
 
